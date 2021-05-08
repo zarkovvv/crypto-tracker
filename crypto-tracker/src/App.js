@@ -1,10 +1,11 @@
 import './App.css';
 import axios from "axios";
 import {useState, useEffect} from "react";
-import Coin from "./components/Coin";
-import Loader from "./components/Loader";
+import Coin from "./components/Coin/Coin";
+import Loader from "./components/Loader/Loader";
 import {AnimatePresence, motion} from "framer-motion";
 import React from "react";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
                                 <input type="text" placeholder="Search..." className="coin-input" onChange={handleChange}/>
                             </form>
                         </div>
+                        <Navigation />
                         {filteredCoins.map(coin => {
                             return <Coin
                                         key={coin.id}
