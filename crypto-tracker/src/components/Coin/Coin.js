@@ -16,7 +16,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
             >
                 <div className="coin-container">
                     <div className="coin-row">
-                        <FontAwesomeIcon className="fav" icon={faHeart} onClick={() => handleFavClick(name.toLowerCase())} color="white"/>
+                        <FontAwesomeIcon className="fav" icon={faHeart} onClick={() => handleFavClick(symbol.toLowerCase())} color="white"/>
                         <div className="coin">
                             <img src={image} alt="crypto"/>
                             <h1>{name}</h1>
@@ -37,20 +37,20 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
     );
 };
 
-function handleFavClick(name) {
+function handleFavClick(symbol) {
     if (sessionStorage.getItem('fav')) {
         const result = JSON.parse(sessionStorage.getItem('fav'));
-        if (!result.coins.includes(name)){
-            result.coins.push(name);
+        if (!result.coins.includes(symbol)){
+            result.coins.push(symbol);
             sessionStorage.setItem('fav', JSON.stringify(result));
         } else {
-            const index = result.coins.indexOf(name);
+            const index = result.coins.indexOf(symbol);
             result.coins.splice(index, 1);
             sessionStorage.setItem('fav', JSON.stringify(result));
         }
     } else {
         const fav = {
-            coins: [name]
+            coins: [symbol]
         }
         sessionStorage.setItem('fav', JSON.stringify(fav));
     }
