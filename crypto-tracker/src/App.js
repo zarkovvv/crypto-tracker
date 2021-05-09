@@ -34,7 +34,7 @@ function App() {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/home">
+                    <Route exact path="/">
                         <Home coins={coins} category={"all"}/>
                     </Route>
                     <Route exact path="/fav">

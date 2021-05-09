@@ -15,13 +15,15 @@ const Home = (props) => {
         setSearch(e.target.value)
     }
 
-    const favFromStorage = JSON.parse(sessionStorage.getItem('fav')).coins;
+    const favFromStorage = (sessionStorage.getItem('fav') ? JSON.parse(sessionStorage.getItem('fav')).coins : []);
 
     let favCoins = [];
-    favFromStorage.forEach(fav => {
-        const coin = props.coins.find(coin => coin.symbol.toLowerCase() === fav.toLowerCase());
-        favCoins.push(coin);
-    });
+    if (favFromStorage){
+        favFromStorage.forEach(fav => {
+            const coin = props.coins.find(coin => coin.symbol.toLowerCase() === fav.toLowerCase());
+            favCoins.push(coin);
+        });
+    }
 
     const filteredCoins =
         props.category === 'all' ?
