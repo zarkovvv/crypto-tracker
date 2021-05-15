@@ -6,7 +6,7 @@ import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 
 
-const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
+const Coin = ({name, image, symbol, price, volume, priceChange, marketCap, isFav}) => {
     return (
         <AnimatePresence>
             <motion.div
@@ -16,7 +16,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
             >
                 <div className="coin-container">
                     <div className="coin-row">
-                        <FontAwesomeIcon className="fav" icon={faHeart} onClick={() => handleFavClick(symbol.toLowerCase())} color="white"/>
+                        <FontAwesomeIcon className="fav" icon={faHeart} onClick={(e) => handleFavClick(e, symbol.toLowerCase())} color={isFav ? 'red' : 'white'}/>
                         <div className="coin">
                             <img src={image} alt="crypto"/>
                             <h1>{name}</h1>
@@ -27,7 +27,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
                             <p className="coin-volume">${volume.toLocaleString()}</p>
                             {priceChange < 0 ? (<p className="coin-percent red">{priceChange.toFixed(2)}%</p>) : (<p className="coin-percent green">{priceChange.toFixed(2)}%</p>)}
                             <p className="coin-marketcap">
-                                Market Cap: ${marketCap.toLocaleString()}
+                                Mrkt Cap: ${marketCap.toLocaleString()}
                             </p>
                         </div>
                     </div>
@@ -37,16 +37,18 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
     );
 };
 
-function handleFavClick(symbol) {
+function handleFavClick(e, symbol) {
     if (sessionStorage.getItem('fav')) {
         const result = JSON.parse(sessionStorage.getItem('fav'));
         if (!result.coins.includes(symbol)){
             result.coins.push(symbol);
             sessionStorage.setItem('fav', JSON.stringify(result));
+            e.target.parentNode.style.color = 'red';
         } else {
             const index = result.coins.indexOf(symbol);
             result.coins.splice(index, 1);
             sessionStorage.setItem('fav', JSON.stringify(result));
+            e.target.parentNode.style.color = 'white';
         }
     } else {
         const fav = {
