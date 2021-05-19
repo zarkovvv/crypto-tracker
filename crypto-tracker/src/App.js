@@ -6,6 +6,7 @@ import React from "react";
 import Home from "./components/Home/Home";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Header from "./components/Header/Header";
+import TradingView from "./components/TradingView/TradingView";
 
 function App() {
 
@@ -41,6 +42,9 @@ function App() {
                     </Route>
                     <Route exact path="/fav">
                         <Home coins={coins} category={"fav"}/>
+                    </Route>
+                    <Route exact path="/trading-view">
+                        <TradingView />
                     </Route>
                 </Switch>
             </BrowserRouter>

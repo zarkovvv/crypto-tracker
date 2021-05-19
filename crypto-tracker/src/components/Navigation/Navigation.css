@@ -1,4 +1,4 @@
-.allBtn, .favBtn {
+.navBtn {
     color: white;
     width: 100px;
     height: 30px;
@@ -8,7 +8,7 @@
     transition: all 200ms;
 }
 
-.allBtn:hover, .favBtn:hover {
+.navBtn:hover {
     color: black;
     background-color: white;
     border: 1px solid black;
@@ -22,7 +22,7 @@
     border: 1px solid black;
 }
 
-.all-coins {
+.btn-wrapper {
     margin-right: 60px;
 }
 
