@@ -1,6 +1,5 @@
 import React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
-import Navigation from "../Navigation/Navigation";
 import Coin from "../Coin/Coin";
 import {useState} from "react";
 import Search from "../Search/Search";
@@ -39,8 +38,7 @@ const Home = (props) => {
                 animate={{ opacity: 1, y: 0}}
             >
                 <div className="price-app">
-                    <Search handleChange={handleChange}/>
-                    <Navigation category={props.category} />
+                    <Search handleChange={handleChange} />
                     {filteredCoins.map(coin => {
                         return (
                             <Coin
@@ -63,3 +61,4 @@ const Home = (props) => {
 };
 
 export default Home;
+

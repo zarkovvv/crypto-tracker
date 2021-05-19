@@ -5,6 +5,7 @@ import Loader from "./components/Loader/Loader";
 import React from "react";
 import Home from "./components/Home/Home";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Header from "./components/Header/Header";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
     } else {
         return (
             <BrowserRouter>
+                <Header />
                 <Switch>
                     <Route exact path="/">
                         <Home coins={coins} category={"all"}/>
@@ -42,8 +44,7 @@ function App() {
                     </Route>
                 </Switch>
             </BrowserRouter>
-
-    );
+        );
     }
 }
 

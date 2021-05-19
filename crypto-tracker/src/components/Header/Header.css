@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    -webkit-box-shadow: 0 10px 14px 2px #FFFFFF;
+    box-shadow: 0 10px 14px 2px #FFFFFF;
+
+}
