@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
+    top: 0;
     color: white;
-    -webkit-box-shadow: 0 10px 14px 2px #FFFFFF;
-    box-shadow: 0 10px 14px 2px #FFFFFF;
+    background-color: rgb(43, 43, 43);
 
 }

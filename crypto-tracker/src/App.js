@@ -3,10 +3,9 @@ import axios from "axios";
 import {useState, useEffect} from "react";
 import Loader from "./components/Loader/Loader";
 import React from "react";
-import Home from "./components/Home/Home";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import Header from "./components/Header/Header";
-import TradingView from "./components/TradingView/TradingView";
+import Main from "./components/Main/Main";
 
 function App() {
 
@@ -36,17 +35,7 @@ function App() {
         return (
             <BrowserRouter>
                 <Header />
-                <Switch>
-                    <Route exact path="/">
-                        <Home coins={coins} category={"all"}/>
-                    </Route>
-                    <Route exact path="/fav">
-                        <Home coins={coins} category={"fav"}/>
-                    </Route>
-                    <Route exact path="/trading-view">
-                        <TradingView />
-                    </Route>
-                </Switch>
+                <Main coins={coins} />
             </BrowserRouter>
         );
     }

@@ -22,5 +22,7 @@
 .heading {
     font-size: 60px;
 
-    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: white;
 }

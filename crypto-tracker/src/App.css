@@ -23,7 +23,7 @@ body::-webkit-scrollbar-track
 
 body::-webkit-scrollbar
 {
-  width: 12px;
+  width: 7px;
   background-color: transparent;
 }
 

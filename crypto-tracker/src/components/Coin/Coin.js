@@ -1,12 +1,12 @@
 import React from 'react';
-import './Coin.css';
+import './Coin.scss';
 import {AnimatePresence, motion} from "framer-motion";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 
 
-const Coin = ({name, image, symbol, price, volume, priceChange, marketCap, isFav}) => {
+const Coin = ({name, image, symbol, price, volume, priceChange, marketCap, isFav, handleFavClick}) => {
     return (
         <AnimatePresence>
             <motion.div
@@ -16,7 +16,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap, isFav
             >
                 <div className="coin-container">
                     <div className="coin-row">
-                        <FontAwesomeIcon className="fav" icon={faHeart} onClick={(e) => handleFavClick(e, symbol.toLowerCase())} color={isFav ? 'red' : 'white'}/>
+                        <FontAwesomeIcon id={symbol} className={`fav ${isFav ? 'favourite' : ''}`} icon={faHeart} onClick={(e) => handleFavClick(e, symbol.toLowerCase())}/>
                         <div className="coin">
                             <img src={image} alt="crypto"/>
                             <h1>{name}</h1>
@@ -37,25 +37,6 @@ const Coin = ({name, image, symbol, price, volume, priceChange, marketCap, isFav
     );
 };
 
-function handleFavClick(e, symbol) {
-    if (sessionStorage.getItem('fav')) {
-        const result = JSON.parse(sessionStorage.getItem('fav'));
-        if (!result.coins.includes(symbol)){
-            result.coins.push(symbol);
-            sessionStorage.setItem('fav', JSON.stringify(result));
-            e.target.parentNode.style.color = 'red';
-        } else {
-            const index = result.coins.indexOf(symbol);
-            result.coins.splice(index, 1);
-            sessionStorage.setItem('fav', JSON.stringify(result));
-            e.target.parentNode.style.color = 'white';
-        }
-    } else {
-        const fav = {
-            coins: [symbol]
-        }
-        sessionStorage.setItem('fav', JSON.stringify(fav));
-    }
-}
+
 
 export default Coin;

@@ -58,10 +58,16 @@
     width: 80px;
 }
 
-.fav {
-    margin-right: 10px;
-    outline: none;
-    border: none;
+.red {
+    color: red;
+}
+
+.green {
+    color: #00f300;
+}
+
+.favourite {
+    color: red !important;
 }
 
 .fav:hover {
@@ -69,10 +75,19 @@
     cursor: pointer !important;
 }
 
-.red {
-    color: #f00606;
+.fav {
+    margin-right: 10px;
+    width: 20px !important;
+    height: 20px !important;
+    outline: none;
+    border: none;
+    transition: all 200ms;
 }
 
-.green {
-    color: #00e01a;
+.fav:active {
+  border: none;
+  background-color: #1c1c1c;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 50px 0 #FFFFFF;
+  box-shadow: 0 0 50px 0 #FFFFFF;
 }
