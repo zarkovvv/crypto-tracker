@@ -9,12 +9,12 @@ const Main = (props) => {
     return (
         <Switch>
             <Route exact path="/">
-                <div className='price-app'>
+                <div className='coins-container'>
                     <AllCoins coins={props.coins} />
                 </div>
             </Route>
             <Route exact path="/fav">
-                <div className='price-app'>
+                <div className='coins-container'>
                     <Favourites coins={props.coins} />
                 </div>
             </Route>
