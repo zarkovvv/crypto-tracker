@@ -37,7 +37,7 @@ const Favourites = (props) => {
     return (
         <React.Fragment>
             <Search handleChange={handleChange} />
-            {filteredCoins.map(coin => {coin.isFav = true
+            {filteredCoins.map(coin => {coin.isFav = true;
                 return (
                     <AnimatePresence key={coin.id}>
                         <motion.div
