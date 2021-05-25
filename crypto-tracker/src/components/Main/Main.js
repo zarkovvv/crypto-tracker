@@ -3,7 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import AllCoins from "../Home/AllCoins";
 import Favourites from "../Favourites/Favourites";
 import TradingView from "../TradingView/TradingView";
-import './Main.css';
+import './Main.scss';
 
 const Main = (props) => {
     return (

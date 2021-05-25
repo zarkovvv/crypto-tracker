@@ -1,5 +1,5 @@
 import React from 'react';
-import './TradingView.css';
+import './TradingView.scss';
 
 const TradingView = () => {
     return (

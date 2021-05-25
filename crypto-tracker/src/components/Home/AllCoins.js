@@ -3,7 +3,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import Coin from "../Coin/Coin";
 import {useState} from "react";
 import Search from "../Search/Search";
-import './AllCoins.css';
+import './AllCoins.scss';
 import {handleFavClick} from "../../functions/handleFavClick";
 
 

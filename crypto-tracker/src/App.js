@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import axios from "axios";
 import {useState, useEffect} from "react";
 import Loader from "./components/Loader/Loader";

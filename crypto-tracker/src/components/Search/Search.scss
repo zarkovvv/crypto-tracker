@@ -25,19 +25,16 @@
     -moz-transition: all .2s ease-out;
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
-    transition: all .2s ease-out
-}
-
-.coin-input:hover {
-    -webkit-box-shadow: 0 0 10px 3px #FFFFFF;
-    box-shadow: 0 0 10px 3px #FFFFFF;
-}
-
-.coin-input:focus {
-    -webkit-box-shadow: 0 0 10px 3px #FFFFFF;
-    box-shadow: 0 0 10px 3px #FFFFFF;
-}
-
-.coin-input::placeholder {
-    color: #e2e2e2;
+    transition: all .2s ease-out;
+    &:hover {
+        -webkit-box-shadow: 0 0 10px 3px #FFFFFF;
+        box-shadow: 0 0 10px 3px #FFFFFF;
+    }
+    &:focus {
+        -webkit-box-shadow: 0 0 10px 3px #FFFFFF;
+        box-shadow: 0 0 10px 3px #FFFFFF;
+    }
+    &::placeholder {
+        color: #e2e2e2;
+    }
 }
