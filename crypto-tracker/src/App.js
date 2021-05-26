@@ -29,7 +29,6 @@ function App() {
     }, []);
 
     if (error) {
-        console.log(error);
         return <ErrorPage />
     }
     if (coins.length === 0) {
@@ -37,7 +36,6 @@ function App() {
             <Loader />
         );
     } else {
-        console.log(error);
         return (
             <BrowserRouter>
                 <Header />
