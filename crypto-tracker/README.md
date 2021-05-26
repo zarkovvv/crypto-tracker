@@ -1,6 +1,6 @@
 # Cryptocurrency price tracker
 
-This project is built using ReactJS, SCSS / CSS, Axios, Font-Awesome.
+This project is built using ReactJS, Javascript, SCSS/CSS, Axios, Font-Awesome, Framer-Motion.
 
 **Note: Project is still under development with new features to be added and bugs to be fixed!**
 
