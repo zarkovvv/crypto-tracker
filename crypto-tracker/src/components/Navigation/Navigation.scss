@@ -30,6 +30,10 @@
     width: 400px;
     height: 70px;
     background-color: rgb(43, 43, 43);
+    transition: all 0.2s;
+    @media screen and (max-width: 429px){
+        width: 350px;
+    }
 }
 
 .navLink {

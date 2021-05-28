@@ -14,6 +14,50 @@
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
   width: 1000px;
+  transition: all 0.2s;
+  @media screen and (max-width: 999px){
+    width: 700px;
+    .coin-marketcap {
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width: 729px){
+    width: 410px;
+    .coin-marketcap {
+      visibility: hidden;
+    }
+    .coin-percent {
+      visibility: hidden;
+    }
+    .coin-volume {
+      visibility: hidden;
+    }
+    .coin-data {
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 429px){
+    width: 270px;
+    .coin-marketcap {
+      visibility: hidden;
+    }
+    .coin-percent {
+      visibility: hidden;
+    }
+    .coin-volume {
+      visibility: hidden;
+    }
+    .coin {
+      min-width: 155px;
+    }
+    h1 {
+      visibility: hidden;
+      max-width: 1px;
+    }
+    .coin-data {
+      align-items: center;
+    }
+  }
 }
 
 .coin {
