@@ -18,19 +18,19 @@
   @media screen and (max-width: 999px){
     width: 700px;
     .coin-marketcap {
-      visibility: hidden;
+      display: none;
     }
   }
   @media screen and (max-width: 729px){
     width: 410px;
     .coin-marketcap {
-      visibility: hidden;
+      display: none;
     }
     .coin-percent {
-      visibility: hidden;
+      display: none;
     }
     .coin-volume {
-      visibility: hidden;
+      display: none;
     }
     .coin-data {
       align-items: center;
@@ -39,22 +39,28 @@
   @media screen and (max-width: 429px){
     width: 270px;
     .coin-marketcap {
-      visibility: hidden;
+      width: 0;
+      display: none;
     }
     .coin-percent {
-      visibility: hidden;
+      width: 0;
+      display: none;
     }
     .coin-volume {
-      visibility: hidden;
+      width: 0;
+      display: none;
     }
     .coin {
+      width: 0;
       min-width: 155px;
     }
     h1 {
-      visibility: hidden;
+      width: 0;
+      display: none;
       max-width: 1px;
     }
     .coin-data {
+      width: 0;
       align-items: center;
     }
   }

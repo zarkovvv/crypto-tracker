@@ -8,8 +8,14 @@
   background-color: $bg-color;
 }
 
+html {
+  //overflow-x: hidden;
+}
+
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
   &::-webkit-scrollbar-track
   {
     border-radius: 10px;
