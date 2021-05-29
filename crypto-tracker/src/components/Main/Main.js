@@ -18,7 +18,7 @@ const Main = (props) => {
                     <Favourites coins={props.coins} />
                 </div>
             </Route>
-            <Route exact path="/trading-view">
+            <Route exact path="/tradingView">
                 <TradingView />
             </Route>
         </Switch>

@@ -5,10 +5,8 @@ import Navigation from "../Navigation/Navigation";
 const Header = () => {
     window.onscroll = function(){
         let top = window.scrollY;
-        console.log('Top: ' + top);
         let header = document.getElementsByClassName('header');
         let offset = header[0].clientHeight; //changed offset to be dynamic, so it works on mobile screens.
-        console.log(offset)
         if(top > offset){
             header[0].classList.remove('top');
             header[0].classList.add('scrolled');
