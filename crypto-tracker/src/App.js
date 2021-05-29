@@ -3,7 +3,7 @@ import axios from "axios";
 import {useState, useEffect} from "react";
 import Loader from "./components/Loader/Loader";
 import React from "react";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
@@ -38,10 +38,10 @@ function App() {
         );
     } else {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <Header />
                 <Main coins={coins} />
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }

@@ -18,8 +18,4 @@ const TradingView = () => {
     );
 };
 
-//style="position: relative;box-sizing: content-box;width: 100%;height: 100%;margin: 0 auto !important;padding: 0 !important;font-family:Arial,sans-serif;"
-//style="width: 100%;height: 100%;background: transparent;padding: 0 !important;"
-//style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;"
-
 export default TradingView;
