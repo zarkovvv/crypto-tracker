@@ -5,9 +5,7 @@ const Search = (props) => {
     return (
         <div className="coin-search">
             <h1 className="coin-text">Search a currency</h1>
-            <form action="">
-                <input type="text" placeholder="Search..." className="coin-input" onChange={props.handleChange}/>
-            </form>
+            <input type="text" placeholder="Search..." className="coin-input" onChange={props.handleChange}/>
         </div>
     );
 };
