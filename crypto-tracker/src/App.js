@@ -11,14 +11,16 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 function App() {
 
     const [coins, setCoins] = useState([]);
-    const [error, setError] = useState();
+    const [error, setError] = useState(undefined);
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const result = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
                 setCoins(result.data);
-                setError();
+                if (error !== undefined) {
+                    setError(undefined);
+                }
             } catch (error) {
                 setError(JSON.stringify(error));
             }
@@ -27,7 +29,8 @@ function App() {
         setInterval(async () => {
             await fetchData();
         }, 60000)
-    }, []);
+    }, [error]);
+
 
     if (error) {
         return <ErrorPage />
